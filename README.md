@@ -16,7 +16,8 @@ Script to send notifications to various services about NUT (network UPS tools) e
 - Copy logrotate file to `/etc/logrotate.d`
 
 ## Install commands
-shell ```
+
+```
 git clone https://github.com/ywaf/nutNotify.git
 cd nutNotify
 cp nutNotify.conf.txt /usr/local/etc/nutNotify.conf
@@ -30,6 +31,7 @@ mkdir /var/log/nutNotify
 chown nut:nut /var/log/nutNotify
 cp nutNotify.logrotate /etc/logrotate.d
 ```
+
 ## NUT Configuration
 Place these into /etc/nut/upsmon.conf
 
