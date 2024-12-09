@@ -56,40 +56,40 @@ fi
 
 case "$argument" in
 ONLINE)
-	text="UPS $ups is now online at $(date +'%H:%M:%S')"
+	text="✅ $ups is back online! Time: $(date +'%H:%M:%S')"
 	writeLog
-	conditionalNotification $argument "$text" ""
+	conditionalNotification $argument "$text"
 ;;
 
 ONBATT)
-	text="Powercut at $(date +'%H:%M:%S')! UPS $ups run on battery!"
+	text="⚠ Powercut at $(date +'%H:%M:%S')! $ups is running on battery!"
 	writeLog
 	emoji=$(echo -e "\xE2\x9A\xA0")
-	conditionalNotification $argument "$text" "$emoji"
+	conditionalNotification $argument "$text"
 ;;
 
 LOWBATT)
 	# note : notify get when /sbin/upsdrvctl shutdown executed
-	text="Low level battery at $(date +'%H:%M:%S') UPS $ups... Shutdown imminent !"
+	text="⚠ Low level battery on $ups! Shutdown imminent! Time: $(date +'%H:%M:%S')"
 	writeLog
 	emoji=$(echo -e "\xF0\x9F\x94\xA5")
-	conditionalNotification $argument "$text" "$emoji"
+	conditionalNotification $argument "$text"
 ;;
 
 FSD)
 	# note : for slave only
-	text="Force shutdown slave server $server at $(date +'%H:%M:%S') !"
+	text="⚠ Force shutdown slave server $server! Time: $(date +'%H:%M:%S') !"
 	writeLog
 	emoji=$(echo -e "\xE2\x9A\xA0")
-	conditionalNotification $argument "$text" "$emoji"
+	conditionalNotification $argument "$text"
 ;;
 
 SHUTDOWN)
 	# note : executed on the master only
-	text="Shutdown master serveur $server at $(date +'%H:%M:%S') !"
+	text="⚠ Shutdown master server $server! Time: $(date +'%H:%M:%S') !"
 	writeLog
 	emoji=$(echo -e "\xF0\x9F\x94\xA5")
-	conditionalNotification $argument "$text" "$emoji"
+	conditionalNotification $argument "$text"
 ;;
 
 COMMOK|COMMBAD|REPLBATT|NOCOMM)
