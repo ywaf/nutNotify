@@ -60,7 +60,7 @@ NOTIFYFLAG NOCOMM SYSLOG+EXEC
 
 
 
-## Original Fork Links
+## Original Repo Links (not really related to this fork)
 Here an article (in french) in my website about [the notification of Nut by Telegram Pushbullet or Pushover](https://www.monlinux.net/2023/02/nut-notifications-push-telegram-pushbullet-pushover-pour-ups/)
 
 You can see a howto to [setup your nut configuration to monitore your UPS from scratch (in french)](https://www.monlinux.net/2018/03/nut-ups-notifications-mails-et-arret/)
