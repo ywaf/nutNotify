@@ -30,6 +30,7 @@ systemctl enable nut-notify-boot.service
 mkdir /var/log/nutNotify
 chown nut:nut /var/log/nutNotify
 cp nutNotify.logrotate /etc/logrotate.d
+chmod +x /usr/local/bin/nutNotify.sh
 ```
 
 ## NUT Configuration
