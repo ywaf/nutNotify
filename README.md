@@ -6,15 +6,6 @@ Script to send notifications to various services about NUT (network UPS tools) e
 - Pushover
 - SMS
 
-## Install overview
-- Copy git
-- Copy file `nutNotify.conf.txt` to `/usr/local/etc/nutNotify.conf` and edit it
-- Copy `nutNotifyFct.sh nutNotifyBoot.sh nutNotify.sh nutShutdown.sh` to `/usr/local/bin`
-- Copy `systemd-notify` to `/lib/systemd/system/nut-notify-boot.service`
-- systemctl reload daemon and enable `nut-notify-boot`
-- Create folder `/var/log/nutNotify` with nut rights
-- Copy logrotate file to `/etc/logrotate.d`
-
 ## Install commands
 
 ```
